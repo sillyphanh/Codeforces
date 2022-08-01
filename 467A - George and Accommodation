@@ -1,0 +1,26 @@
+
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+struct xy
+{
+	int x, y;
+};
+int main()
+{
+	int n;
+	cin >> n;
+	xy* a = new xy[n];
+	int dem = 0;
+	for (int i = 0; i < n; i++)
+	{
+		cin >> a[i].x>>a[i].y;
+	}
+	for (int i = 0; i < n; i++)
+	{
+		if (a[i].x < a[i].y && a[i].y - a[i].x >= 2)
+			dem++;
+	}
+	cout << dem;
+}
