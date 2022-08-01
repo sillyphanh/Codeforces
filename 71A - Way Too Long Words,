@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+using namespace std;
+void nhap(string a[], int& n)
+{
+	cin >> n;
+	int i = 0;
+	cin.ignore();
+	while (i < n)
+	{
+		getline(cin, a[i]);
+		i++;
+	}
+}
+void xuat(string a[], int n)
+{
+	string s[100];
+	int i = 0;
+	while (i < n)
+	{
+		int n = a[i].size();
+		if (n <= 10)
+			cout << a[i] << endl;
+		else
+			cout << a[i][0] << n - 2 << a[i][n - 1] << endl;
+		i++;
+	}
+}
+int main()
+{
+	string a[100];
+	int n;
+	nhap(a, n);
+	xuat(a, n);
+}
