@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	string s;
+	getline(cin, s);
+	int demhoa = 0;
+	int demthuong = 0;
+	int n = s.size();
+	for (int i = 0; i < n; i++)
+	{
+		if (65 <= s[i] && s[i] <= 90)
+			demhoa++;
+		else if (97 <= s[i] && s[i] <= 122)
+			demthuong++;
+	}
+	for (int i = 0; i < n; i++)
+	{
+		if (demthuong >= demhoa)
+			s[i] = tolower(s[i]);
+		else
+			s[i] = toupper(s[i]);
+	}
+	cout << s;
+
+}
