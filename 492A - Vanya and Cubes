@@ -1,0 +1,22 @@
+
+def tong(n):
+    if n == 1:
+        return 1
+    return tong(n-1)+n
+n = int(input())
+ 
+i = 2
+sum = 1
+if n == 1:
+    print(1)
+else:
+    for i in range(i,n+1):
+        sum += tong(i)
+        if sum < n:
+            continue
+        elif sum == n:
+            print(i) 
+            break
+        else:
+            print(i-1) 
+            break
