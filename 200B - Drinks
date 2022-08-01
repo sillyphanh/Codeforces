@@ -1,0 +1,10 @@
+
+n = int(input())
+sum = 0
+x = [int(x) for x in input("").split()]
+i = 0
+sum = 0
+for i in range(i,n):
+    sum += x[i]
+sum = float(sum)
+print(sum/n)
