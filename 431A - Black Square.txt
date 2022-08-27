@@ -1,0 +1,26 @@
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+#include <string>
+using namespace std;
+int main()
+{
+	int a, b, c, d;
+	cin >> a >> b >> c >> d;
+	cin.ignore();
+	string s;
+	int dem = 0;
+	getline(cin, s);
+	for (int i = 0; i < s.size(); i++)
+	{
+		if (s[i] == '1')
+			dem += a;
+		if (s[i] == '2')
+			dem += b;
+		if (s[i] == '3')
+			dem += c;
+		if (s[i] == '4')
+			dem += d;
+	}
+	cout << dem;
+}
